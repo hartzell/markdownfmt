@@ -479,7 +479,8 @@ func Process(filename string, src []byte, opt *Options) ([]byte, error) {
 		blackfriday.EXTENSION_AUTOLINK |
 		blackfriday.EXTENSION_STRIKETHROUGH |
 		blackfriday.EXTENSION_SPACE_HEADERS |
-		blackfriday.EXTENSION_NO_EMPTY_LINE_BEFORE_BLOCK
+		blackfriday.EXTENSION_NO_EMPTY_LINE_BEFORE_BLOCK |
+		blackfriday.EXTENSION_HARD_LINE_BREAK
 
 	output := blackfriday.Markdown(text, NewRenderer(opt), extensions)
 	return output, nil
